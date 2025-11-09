@@ -1,4 +1,4 @@
-# Portfolio Website - Anh The Phung
+# Portfolio Website - Anh Phung
 
 Modern personal portfolio website built with HTML5, CSS3 animations, and JavaScript.
 
@@ -108,11 +108,10 @@ Website uses:
 
 ## 👨‍💻 About
 
-**Name**: Anh The Phung  
+**Name**: Anh Phung  
 **Role**: Freelance QA Engineer | Senior Software QA Specialist  
 **Location**: Berlin, Germany  
 **Email**: saintmaster@hotmail.com  
-**Phone**: +49 17645733902  
 **Origin**: Ho Chi Minh City, Vietnam  
 
 ### Experience
@@ -159,10 +158,9 @@ Potential additions:
 To update contact information, edit the `#contact` section in `index.html`
 
 ### Social Media
-- LinkedIn: [Add your LinkedIn URL]
-- GitHub: [Add your GitHub URL]
-- Twitter: [Add your Twitter URL]
-- Facebook: [Add your Facebook URL]
+- LinkedIn: [https://www.linkedin.com/in/anh-phung-1a675755/](https://www.linkedin.com/in/anh-phung-1a675755/)
+- GitHub: [https://github.com/RedzWM](https://github.com/RedzWM)
+- Portfolio Repo: [https://github.com/RedzWM/Portfolio](https://github.com/RedzWM/Portfolio)
 
 ---
 
@@ -170,4 +168,4 @@ To update contact information, edit the `#contact` section in `index.html`
 **Browser Support**: Chrome, Firefox, Safari, Edge (latest versions)  
 **License**: Personal use  
 
-Designed with ❤️ by Anh The Phung | 2025
+Designed with ❤️ by Anh Phung | 2025
