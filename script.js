@@ -153,29 +153,8 @@ revealElements.forEach(element => {
     scrollObserver.observe(element);
 });
 
-// Contact Form Submission
-const contactForm = document.querySelector('.contact-form');
-
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        subject: document.getElementById('subject').value,
-        message: document.getElementById('message').value
-    };
-    
-    // Here you would typically send the data to a server
-    console.log('Form submitted:', formData);
-    
-    // Show success message
-    alert('Cảm ơn bạn đã liên hệ! Tôi sẽ phản hồi sớm nhất có thể.');
-    
-    // Reset form
-    contactForm.reset();
-});
+// Contact Form - Handled by FormSubmit.co
+// No JavaScript needed - form submits directly to FormSubmit service
 
 // Parallax Effect on Hero Section
 window.addEventListener('scroll', () => {
