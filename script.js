@@ -153,8 +153,58 @@ revealElements.forEach(element => {
     scrollObserver.observe(element);
 });
 
-// Contact Form - Handled by FormSubmit.co
-// No JavaScript needed - form submits directly to FormSubmit service
+// Contact Form - AJAX Submission (Professional, no redirect)
+const contactForm = document.getElementById('contactForm');
+const submitBtn = document.getElementById('submitBtn');
+const formStatus = document.getElementById('formStatus');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(contactForm);
+        
+        // Update button state
+        submitBtn.classList.add('loading');
+        submitBtn.disabled = true;
+        const originalBtnText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        
+        // Hide previous status
+        formStatus.classList.remove('show', 'success', 'error');
+        
+        try {
+            // Submit to FormSubmit.co
+            const response = await fetch(contactForm.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            
+            if (response.ok) {
+                // Success
+                formStatus.className = 'form-status show success';
+                formStatus.innerHTML = '<i class="fas fa-check-circle"></i> Thank you! Your message has been sent successfully. I\'ll get back to you soon.';
+                contactForm.reset();
+            } else {
+                // Error
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            // Error handling
+            formStatus.className = 'form-status show error';
+            formStatus.innerHTML = '<i class="fas fa-exclamation-circle"></i> Oops! Something went wrong. Please try again or contact me directly at <a href="mailto:saintmaster@hotmail.com" style="color: inherit; text-decoration: underline;">saintmaster@hotmail.com</a>';
+        } finally {
+            // Restore button state
+            submitBtn.classList.remove('loading');
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+        }
+    });
+}
 
 // Parallax Effect on Hero Section
 window.addEventListener('scroll', () => {
